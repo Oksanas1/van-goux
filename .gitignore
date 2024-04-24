@@ -1,0 +1,10 @@
+.eslintrc.js
+.fantasticonrc.js
+.DS_Store
+icon.scss
+
+/node_modules
+/images
+/icon-helpers
+/font
+

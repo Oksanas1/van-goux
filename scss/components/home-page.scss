@@ -1,0 +1,499 @@
+.headline {
+  margin-top: 80px;
+  position: relative;
+
+  @include to-desctop {
+    margin-top: 150px;
+  }
+
+  &__content {
+    padding: 0 to-percentages($pading * 4, 640); //80/640
+
+    @include to-desctop {
+      max-width: 600px;
+      position: relative;
+      z-index: 5;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    font-size: 4rem;
+    line-height: 60px;
+    font-weight: $text-weight-bold;
+  }
+
+  &__description {
+    margin-top: 20px;
+    font-size: 2rem;
+    line-height: 40px;
+    font-weight: $text-weight-normal;
+  }
+
+  button {
+    min-width: 300px;
+    margin-top: 40px;
+  }
+
+  &__upload-btn {
+    display: none;
+  }
+
+  &__footer {
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  &__mobile_image {
+    margin: 0 auto;
+
+    @include to-desctop {
+      position: absolute;
+      top: 50px;
+      right: to-percentages($pading * 2, 1120); //40/1120
+      max-width: 600px;
+    }
+  }
+
+  &__mobile_description {
+    padding: 30px to-percentages(60, 640); //60/640
+    background: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson26/hw1/PleaseVisitDesktopSiteSectionBackground.png)
+      top / cover no-repeat;
+    font-size: 2rem;
+    line-height: 40px;
+    font-weight: $text-weight-button;
+    text-transform: uppercase;
+    color: $text-color-white;
+
+    @include to-desctop {
+      display: none;
+    }
+  }
+}
+
+.reviews {
+  margin-top: 50px;
+  padding: 0 to-percentages(50, 640); //50/640
+
+  @include to-desctop {
+    margin-top: 110px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $pading * 2px;
+  }
+
+  .review {
+    max-width: 540px;
+    margin-top: 50px;
+    padding: $pading * 2px to-percentages($pading, 540); //20/540
+    box-shadow: $box-shadow;
+    background: $color-white;
+
+    &__header {
+      display: flex;
+      position: relative;
+    }
+
+    &__image {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+    }
+
+    &__name {
+      width: 100%;
+      margin-left: to-percentages($pading, 500); //20/500
+      font-size: 1.8rem;
+      line-height: $text-height-main;
+      font-weight: $text-weight-bold;
+      color: $text-color-black2;
+    }
+
+    &__sub_title {
+      display: block;
+      width: 100%;
+      font-size: 1.4rem;
+      color: $color-blue1;
+    }
+
+    &__quote-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 46px;
+    }
+
+    &__description {
+      margin-top: 40px;
+      font-size: 1.4rem;
+      font-weight: $text-weight-normal;
+      line-height: $text-height-main;
+      color: $text-color-black2;
+
+      @include to-desctop {
+        display: none;
+      }
+
+      &.descktop {
+        display: none;
+
+        @include to-desctop {
+          display: block;
+          font-size: 16px;
+          font-weight: 30px;
+        }
+      }
+    }
+  }
+}
+
+.wokflow {
+  &__list {
+    @include to-desctop {
+      margin-top: 50px;
+    }
+  }
+
+  &__step {
+    padding: $pading * 2px;
+
+    &:nth-of-type(-n + 2):after {
+      content: '';
+      border: 1px dashed $color-blue1;
+      height: 40px;
+      position: absolute;
+      top: 100%;
+      left: 60px;
+
+      @include to-desctop {
+        width: to-percentages(75, 320);
+        height: 0;
+        top: 50%;
+        left: 101%;
+      }
+    }
+
+    & + & {
+      margin-top: 40px;
+
+      @include to-desctop {
+        margin: 50px 0 0 to-percentages(80, 1120);
+
+        &:last-of-type {
+          margin-top: 100px;
+        }
+      }
+    }
+  }
+
+  .step {
+    &__header {
+      position: relative;
+      padding-right: $pading * 2px;
+    }
+
+    &__subtitle {
+      font-size: 1.2rem;
+      color: $text-color-black2;
+      font-weight: $text-weight-button;
+      line-height: 20px;
+    }
+
+    &__title {
+      font-size: 1.8rem;
+      color: $text-color-blue2;
+      font-weight: $text-weight-button;
+      text-transform: uppercase;
+      line-height: 40px;
+    }
+
+    &__icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+    }
+
+    &__description {
+      margin-top: 10px;
+      font-size: 1.6rem;
+      color: $text-color-black2;
+      line-height: $text-height-main;
+      font-weight: $text-weight-normal;
+    }
+  }
+}
+
+.features {
+  &__list {
+    margin-top: 60px;
+  }
+
+  .feature {
+    display: flex;
+    flex-wrap: wrap;
+
+    & + li {
+      margin-top: 60px;
+
+      @include to-desctop {
+        margin-top: 50px;
+
+        &:last-of-type {
+          margin-top: 100px;
+        }
+      }
+    }
+
+    &__image {
+      width: 80px;
+
+      @include to-desctop {
+        width: 120px;
+      }
+    }
+
+    &__title {
+      flex-grow: 1;
+      padding: $pading * 1px;
+      background: $color-white2;
+      font-size: 2rem;
+      color: $text-color-black2;
+      line-height: 40px;
+      font-weight: $text-weight-bold;
+      text-wrap: wrap;
+
+      @include to-desctop {
+        width: 60%;
+        line-height: $text-height-main;
+      }
+    }
+
+    &__description {
+      width: 100%;
+      padding: 30px $pading * 2px;
+      font-size: 1.6rem;
+      color: $text-color-black2;
+      line-height: $text-height-main;
+      font-weight: $text-weight-normal;
+    }
+  }
+}
+
+.users {
+  .mobile {
+    @include to-desctop {
+      display: none;
+    }
+  }
+
+  .desktop {
+    display: none;
+
+    @include to-desctop {
+      display: block;
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .user {
+    flex: 0 1 250px;
+    box-shadow: $box-shadow;
+    padding: $pading * 1px;
+    background: $color-white;
+
+    @include to-desctop {
+      flex: 0 1 360px;
+    }
+
+    & + .user:nth-of-type(n + 3) {
+      margin-top: 20px;
+    }
+
+    @include to-desctop {
+      & + .user:nth-of-type(3) {
+        margin-top: 0;
+      }
+    }
+
+    &__title {
+      font-size: 2rem;
+      color: $text-color-blue2;
+      font-weight: 700;
+      line-height: 40px;
+    }
+
+    &__description {
+      margin-top: 20px;
+      font-size: 1.6rem;
+      color: $text-color-black2;
+      font-weight: $text-weight-normal;
+      line-height: $text-height-main;
+    }
+  }
+}
+
+.purposes {
+  &__content {
+    margin-top: 50px;
+
+    @include to-desctop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .purpose {
+    display: flex;
+    box-shadow: $box-shadow;
+
+    @include to-desctop {
+      width: 540px;
+    }
+
+    & + .purpose {
+      margin-top: 40px;
+
+      @include to-desctop {
+        &:nth-of-type(2) {
+          margin: 0;
+        }
+
+        &:nth-of-type(n + 3) {
+          margin-top: 40px;
+        }
+      }
+    }
+
+    &__img {
+      width: 80px;
+    }
+
+    &__description {
+      flex: 1 1 0;
+      background: $color-white;
+      padding: $pading * 1px;
+      font-size: 1.8rem;
+      font-weight: $text-weight-bold;
+      line-height: 40px;
+    }
+  }
+}
+
+.consultation {
+  padding: 60px;
+  margin-top: 60px;
+
+  @include to-desctop {
+    margin-top: 120px;
+  }
+
+  &__wrap {
+    background: $color-blue1;
+    position: relative;
+  }
+
+  &__title {
+    color: $text-color-white;
+    font-weight: $text-weight-button;
+
+    &::after {
+      border-color: $color-white;
+      box-shadow: 0px 2px 0px 0px #6a9eff;
+    }
+  }
+
+  &__description {
+    margin-top: 50px;
+    color: $color-white;
+    font-size: 2rem;
+    font-weight: $text-weight-normal;
+    line-height: 40px;
+
+    @include to-desctop {
+      max-width: 640px;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin-top: 40px;
+    background: $color-white;
+    box-shadow: 4px 4px 20px 0px #ffffff66;
+    color: $text-color-blue2;
+  }
+
+  &__img {
+    display: none;
+
+    @include to-desctop {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.stories {
+  padding: 60px;
+  margin: 0;
+
+  @include to-desctop {
+    margin: 120px auto 0;
+    padding: 0 0 120px;
+  }
+
+  &__content {
+    @include to-desctop {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .story-card {
+    margin-top: 50px;
+    position: relative;
+    padding-left: 60px;
+
+    @include to-desctop {
+      max-width: 480px;
+    }
+
+    &__img {
+      position: absolute;
+      left: 0;
+      width: 40px;
+    }
+
+    & + .story-card {
+      margin-top: 40px;
+    }
+
+    &__title {
+      font-size: 2rem;
+      line-height: 40px;
+      font-weight: $text-weight-bold;
+    }
+
+    &__description {
+      padding-top: $pading * 1px;
+      font-size: 1.6rem;
+      font-weight: $text-weight-normal;
+      color: $text-color-black;
+      line-height: $text-height-main;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+}

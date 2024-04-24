@@ -1,0 +1,54 @@
+@import '../utils/varibles.scss';
+@import '../utils/mixin.scss';
+
+.page-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px to-percentages(80, 640) 0; //80/640
+
+  @include to-desctop {
+    padding: 30px to-percentages($pading * 2, 1200) 0; //40/1200
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo__description {
+    font-size: 2rem;
+    font-weight: $text-weight-bold;
+    color: $text-color-blue;
+    line-height: $text-height-main;
+  }
+
+  &__menu {
+    display: none;
+
+    @include to-desctop {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__upload-btn {
+    min-width: 180px;
+    margin-left: 50px;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__item {
+    margin-left: 50px;
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    color: $text-color-black;
+    font-weight: $text-weight-bold;
+    line-height: 20px;
+  }
+}

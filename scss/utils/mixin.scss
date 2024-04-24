@@ -1,0 +1,21 @@
+@use 'sass:math';
+
+@function to-percentages($width, $parrents-width) {
+  @return #{math.div($width, $parrents-width) * 100%};
+}
+
+@mixin clearfix {
+  content: '';
+  display: table;
+  width: 100%;
+  clear: both;
+}
+
+$mobile-width: 640px;
+$desctope-width: 1024px;
+
+@mixin to-desctop {
+  @media screen and (min-width: ($mobile-width + 1px)) {
+    @content;
+  }
+}

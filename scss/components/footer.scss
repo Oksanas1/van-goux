@@ -1,0 +1,56 @@
+footer {
+  background: $color-white3;
+}
+
+.page-footer {
+  margin: 0 auto;
+  padding: $pading * 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  &-logo {
+    .logo__description {
+      background: #1968fc0d;
+      font-size: 1.4rem;
+      line-height: 20px;
+      font-weight: $text-weight-bold;
+      color: $text-color-blue;
+    }
+  }
+
+  &-contacts__list {
+    display: none;
+
+    @include to-desctop {
+      display: flex;
+    }
+
+    a {
+      display: block;
+      padding: 10px;
+      min-width: 120px;
+      font-size: 1.4rem;
+      line-height: 20px;
+      font-weight: $text-weight-bold;
+      color: $text-color-black;
+      text-align: center;
+    }
+  }
+
+  &-social {
+    display: flex;
+
+    li + li {
+      margin-left: 30px;
+    }
+  }
+
+  &-img {
+    width: 55px;
+    margin-bottom: -40px;
+    box-shadow: 2px 6px 12px 0px #ff83334d;
+  }
+}
