@@ -3,6 +3,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  outline: 1px solid orange;
 }
 
 body,
@@ -29,12 +30,13 @@ img {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
-/* Inherit fonts for inputs and buttons */
 button {
   border: none;
   font: inherit;
+  cursor: pointer;
 }
 
 html {
@@ -70,7 +72,7 @@ body {
 
 .horizontal-width {
   max-width: 1200px;
-  margin: 120px auto 0;
+  margin: 0 auto;
   padding: 0 9.375%;
 }
 @media screen and (min-width: 641px) {
@@ -138,85 +140,6 @@ button {
   right: -5px;
 }
 
-@font-face {
-  font-family: "icons";
-  src: url("font/icon-font/icons.ttf?3a4a594d83e9194cd97684a2fd1ecc61") format("truetype"), url("font/icon-font/icons.woff?3a4a594d83e9194cd97684a2fd1ecc61") format("woff"), url("font/icon-font/icons.woff2?3a4a594d83e9194cd97684a2fd1ecc61") format("woff2");
-}
-[class^=icon-], [class*=" icon-"], .icon-font {
-  font-family: icons !important;
-  font-style: normal;
-  font-weight: normal !important;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-use-code:before {
-  content: "\f101";
-}
-
-.icon-upload:before {
-  content: "\f102";
-}
-
-.icon-system:before {
-  content: "\f103";
-}
-
-.icon-starry-night:before {
-  content: "\f104";
-}
-
-.icon-quote:before {
-  content: "\f105";
-}
-
-.icon-prototipes:before {
-  content: "\f106";
-}
-
-.icon-pixel-perfect:before {
-  content: "\f107";
-}
-
-.icon-picture:before {
-  content: "\f108";
-}
-
-.icon-nvp:before {
-  content: "\f109";
-}
-
-.icon-landing-page:before {
-  content: "\f10a";
-}
-
-.icon-juju:before {
-  content: "\f10b";
-}
-
-.icon-instegram:before {
-  content: "\f10c";
-}
-
-.icon-flexible:before {
-  content: "\f10d";
-}
-
-.icon-face-book:before {
-  content: "\f10e";
-}
-
-.icon-download:before {
-  content: "\f10f";
-}
-
-.icon-components:before {
-  content: "\f110";
-}
-
 .page-header {
   max-width: 1200px;
   margin: 0 auto;
@@ -229,7 +152,8 @@ button {
     justify-content: space-between;
   }
 }
-.page-header .logo__description {
+.page-header__logo_description {
+  padding: 10px 0 10px 20px;
   font-size: 2rem;
   font-weight: 600;
   color: #1968fc;
@@ -264,20 +188,20 @@ button {
   line-height: 20px;
 }
 
-footer {
-  background: #fbfbfb;
-}
-
 .page-footer {
-  margin: 0 auto;
-  padding: 40px;
+  padding: 40px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-logo .logo__description {
-  background: rgba(25, 104, 252, 0.0509803922);
+.footer {
+  background: #fbfbfb;
+}
+.footer-logo {
+  background: #f0f4fb;
+}
+.footer-logo_description {
   font-size: 1.4rem;
   line-height: 20px;
   font-weight: 600;
@@ -303,13 +227,12 @@ footer {
 }
 .footer-social {
   display: flex;
-}
-.footer-social li + li {
-  margin-left: 30px;
+  gap: 30px;
 }
 .footer-img {
   width: 55px;
-  margin-bottom: -40px;
+  position: relative;
+  bottom: -40px;
   box-shadow: 2px 6px 12px 0px rgba(255, 131, 51, 0.3019607843);
 }
 
@@ -343,6 +266,7 @@ footer {
   font-size: 2rem;
   line-height: 40px;
   font-weight: 400;
+  color: #11223f;
 }
 .headline button {
   min-width: 300px;
@@ -453,6 +377,9 @@ footer {
   }
 }
 
+.wokflow {
+  margin-top: 120px;
+}
 @media screen and (min-width: 641px) {
   .wokflow__list {
     margin-top: 50px;
@@ -519,6 +446,9 @@ footer {
   font-weight: 400;
 }
 
+.features {
+  margin-top: 120px;
+}
 .features__list {
   margin-top: 60px;
 }
@@ -570,6 +500,9 @@ footer {
   font-weight: 400;
 }
 
+.users {
+  margin-top: 120px;
+}
 @media screen and (min-width: 641px) {
   .users .mobile {
     display: none;
@@ -613,6 +546,7 @@ footer {
   color: #1967fa;
   font-weight: 700;
   line-height: 40px;
+  text-transform: uppercase;
 }
 .users .user__description {
   margin-top: 20px;
@@ -622,6 +556,9 @@ footer {
   line-height: 30px;
 }
 
+.purposes {
+  margin-top: 120px;
+}
 .purposes__content {
   margin-top: 50px;
 }

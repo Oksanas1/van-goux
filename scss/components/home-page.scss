@@ -28,6 +28,7 @@
     font-size: 2rem;
     line-height: 40px;
     font-weight: $text-weight-normal;
+    color: $text-color-black2;
   }
 
   button {
@@ -149,6 +150,8 @@
 }
 
 .wokflow {
+  margin-top: 120px;
+
   &__list {
     @include to-desctop {
       margin-top: 50px;
@@ -226,6 +229,8 @@
 }
 
 .features {
+  margin-top: 120px;
+
   &__list {
     margin-top: 60px;
   }
@@ -282,6 +287,8 @@
 }
 
 .users {
+  margin-top: 120px;
+
   .mobile {
     @include to-desctop {
       display: none;
@@ -328,6 +335,7 @@
       color: $text-color-blue2;
       font-weight: 700;
       line-height: 40px;
+      text-transform: uppercase;
     }
 
     &__description {
@@ -341,6 +349,8 @@
 }
 
 .purposes {
+  margin-top: 120px;
+
   &__content {
     margin-top: 50px;
 

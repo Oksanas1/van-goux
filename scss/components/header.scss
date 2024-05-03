@@ -1,6 +1,3 @@
-@import '../utils/varibles.scss';
-@import '../utils/mixin.scss';
-
 .page-header {
   max-width: 1200px;
   margin: 0 auto;
@@ -12,11 +9,14 @@
     justify-content: space-between;
   }
 
-  .logo__description {
-    font-size: 2rem;
-    font-weight: $text-weight-bold;
-    color: $text-color-blue;
-    line-height: $text-height-main;
+  &__logo {
+    &_description {
+      padding: 10px 0 10px $pading + px;
+      font-size: 2rem;
+      font-weight: $text-weight-bold;
+      color: $text-color-blue;
+      line-height: $text-height-main;
+    }
   }
 
   &__menu {
